@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: rgb(224, 221, 218);
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    grid-template-rows: 2fr 7fr 4fr 3fr ;
+    padding: 20px;
+    gap:10px;
+}
+.items{
+    display: grid;
+    place-items: center;
+}
+.orange1{
+    background-color: orange;
+    grid-column: span 2;
+}
+.orange2{
+    background-color: orange;
+    grid-column: span 2;
+}
+.green{
+    background-color: greenyellow;
+    grid-column: span 4;
+}
+.blue1{
+    background-color: blue;
+    grid-column: span 1.8 ;
+}
+.blue2{
+    background-color: blue;
+    grid-column: span 1 ;
+}
+.blue3{
+    background-color: blue;
+    grid-column: span 2 ;
+}
+.ash1{
+    background-color: rgb(178, 178, 178);
+    grid-column: span 1 ;
+}
+.ash2{
+    background-color: rgb(178, 178, 178);
+    grid-column: span 1,2 ;
+}
+.ash3{
+    background-color: rgb(178, 178, 178);
+    grid-column: span 1,2,3 ;
+}
+.ash4{
+    background-color: rgb(178, 178, 178);
+    grid-column: span 1,2,3,4 ;
+}
+
+@media screen and (max-width:768px){
+    .container{
+        display: grid;
+        grid-template-rows: 2fr 2fr 5fr 3fr 3fr 3fr 3fr 3fr;
+        grid-template-columns: auto auto auto auto ;
+        gap: 10px;
+    }
+    .orange1{
+        grid-column: span 4;
+    }
+    .orange2{
+        grid-column: span 4;
+    }
+    .green{
+        grid-column: span 4;
+    }
+    .blue1{
+        grid-column: span 4;
+    }
+    .blue2{
+        grid-column: span 4;
+    }
+    .blue3{
+        grid-column: span 4;
+    }
+    .ash1{
+        grid-column: span 2;  
+    }
+    .ash2{
+        grid-column: span 2;  
+    }
+    .ash3{
+        grid-column: span 2;  
+    }
+    .ash4{
+        grid-column: span 2;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 2fr 2fr 3fr 4fr 4fr 4fr 2fr;
+        width:200px;
+    }
+    .orange1{
+        order:1;
+    }
+    .orange2{
+        order:2;
+    }
+    .green{
+        order: 3;
+    }
+    .blue1{
+        order:4;
+    }
+    .blue2{
+        order:5;
+    }
+    .blue3{
+        order:6;
+    }
+    .ash1{
+        order:7;
+        grid-column: span 4;
+    }
+    .ash2{
+        display: none;
+    }
+    .ash3{
+        display: none;
+    }
+    .ash4{
+        display: none;
+    }
+    
+}
